@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Contato"
+             x:Class="AppGuiaDev.Views.Contato">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="texto_centralizado" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Style="{StaticResource texto_centralizado}" Margin="0,20,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="ETEC FRANCISCO GARCIA" FontAttributes="Bold" FontSize="Title" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Style="{StaticResource texto_centralizado}" Margin="0,20,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Centro Paula Souza" FontSize="Title" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="ENDEREÇO: " FontAttributes="Bold" Margin="0,20,0,0" Style="{StaticResource texto_centralizado}" />
+            <Label Text="Av. Dr. Américo Pereira Lima nº1507" Style="{StaticResource texto_centralizado}" />
+            <Label Text="Jd. Lavínia - Mococa (SP)" Style="{StaticResource texto_centralizado}" />
+
+            <StackLayout Spacing="10" Padding="10" Margin="10">
+                <Button Text="(19) 3565-0052" Style="{StaticResource BotaoVermelho}" Clicked="fone_Clicked" />
+                <Button Text="Enviar E-Mail" Style="{StaticResource BotaoEscuro}" Clicked="email_Clicked" />
+                <Button Text="Chamar no WhatsApp" Style="{StaticResource BotaoVermelho}" Clicked="whatsapp_Clicked" />
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
